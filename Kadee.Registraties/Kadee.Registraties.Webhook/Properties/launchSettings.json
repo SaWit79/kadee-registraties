@@ -1,0 +1,9 @@
+{
+  "profiles": {
+    "Kadee.Registraties.Webhook": {
+      "commandName": "Project",
+      "commandLineArgs": "--port 7025",
+      "launchBrowser": false
+    }
+  }
+}
