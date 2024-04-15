@@ -5,17 +5,17 @@ using Microsoft.Extensions.Logging;
 
 namespace Kadee.Registraties.Webhook
 {
-    public class KadeeWebhook
+    public class FeatherlyWebhook
     {
         private readonly ILogger _logger;
 
-        public KadeeWebhook(ILoggerFactory loggerFactory)
+        public FeatherlyWebhook(ILoggerFactory loggerFactory)
         {
-            _logger = loggerFactory.CreateLogger<KadeeWebhook>();
+            _logger = loggerFactory.CreateLogger<FeatherlyWebhook>();
         }
 
-        [Function("KadeeWebhook")]
-        public HttpResponseData Run([HttpTrigger(AuthorizationLevel.Anonymous, "get", "post")] HttpRequestData req)
+        [Function("FeatherlyWebhook-newRegistration")]
+        public HttpResponseData Run([HttpTrigger(AuthorizationLevel.Function, "get", "post")] HttpRequestData req)
         {
             _logger.LogInformation("C# HTTP trigger function processed a request.");
 
