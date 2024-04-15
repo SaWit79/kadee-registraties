@@ -36,14 +36,14 @@ jobs:
           popd
       
       - name: Login to Azure
-        uses: azure/login@v4
+        uses: azure/login@v1
         with:
           client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_1CC19458E0044760A3DC9E29415C6700 }}
           tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_8FBF36669DAE40EDBAFE912D7B1D54CC }}
           subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_698B4D97FCDC4E5D99C7EC35E07355FD }}
 
       - name: 'Run Azure Functions Action'
-        uses: Azure/functions-action@v4
+        uses: Azure/functions-action@v1
         id: fa
         with:
           app-name: 'kadee-registraties'
